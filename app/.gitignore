@@ -1,12 +1,7 @@
 /build
 
 # Google services
-app/google-services.json
+notefy/google-services.json
 
 # .idea
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+notefy/.idea
