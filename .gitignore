@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Google services
+/notefy/google-services.json
+
+# .idea
+/notefy/*.idea
