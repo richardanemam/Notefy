@@ -1,7 +1,7 @@
 /build
 
 # Google services
-notefy/google-services.json
+/notefy/google-services.json
 
 # .idea
-notefy/.idea
+/notefy/*.idea
