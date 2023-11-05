@@ -2,16 +2,18 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.commom"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.commom"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -38,10 +40,15 @@ android {
 
 dependencies {
 
+    // Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Dependency Injection
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 }
