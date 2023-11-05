@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Notefy"
 include(":app")
 include(":notes")
-include(":commom")
+include(":common")
