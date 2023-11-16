@@ -39,8 +39,8 @@ android {
 
 dependencies {
 
-    // Module
-    //implementation project(":common")
+    // Modules
+    implementation(project(":common"))
 
     // Core
     implementation(libs.androidx.core.ktx)
@@ -52,6 +52,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // UI Tests
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
@@ -59,6 +63,16 @@ dependencies {
     // Dependency Injection
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    // Room DB
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    // Compose
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.navigation.compose)
+    implementation("androidx.compose.material:material-icons-extended")
 }
 
 // Allow references to generated code
