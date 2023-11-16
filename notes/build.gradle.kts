@@ -67,8 +67,10 @@ dependencies {
     // Room DB
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
+    implementation(libs.androidx.room.ktx)
 
     // Compose
+    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.navigation.compose)

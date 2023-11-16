@@ -1,4 +1,4 @@
-package com.notefy.ui.theme
+package com.commom.ui.theme
 
 import android.app.Activity
 import android.os.Build

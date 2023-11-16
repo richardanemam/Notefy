@@ -87,4 +87,7 @@ dependencies {
     // Dependency Injection
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    // Modules
+    implementation(project(":common"))
 }

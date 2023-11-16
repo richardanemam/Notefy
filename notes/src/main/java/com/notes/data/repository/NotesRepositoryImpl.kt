@@ -1,4 +1,4 @@
-package com.notes.data
+package com.notes.data.repository
 
 import com.commom.di.IoDispatcher
 import com.notes.domain.model.Note
