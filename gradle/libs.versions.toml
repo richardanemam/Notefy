@@ -16,30 +16,50 @@ mockk = "1.13.8"
 name = "1.0"
 agp = "8.1.1"
 org-jetbrains-kotlin-android = "1.8.10"
-room-version = "2.6.0"
+room-version = "2.6.1"
 nav-compose = "2.7.5"
 
 [libraries]
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+# Core
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
-androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core" }
-androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-runtime-ktx" }
-androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room-version" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android" }
+
+# Unit Test
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
 junit = { module = "junit:junit", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+# Room DB
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room-version" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-version" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-version" }
+
+# DI
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android" }
+
+# Coroutine
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
-material = { module = "com.google.android.material:material", version.ref = "material" }
-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-version" }
-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-version" }
+
+# UI test
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core" }
+ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+# Compose
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-runtime-ktx" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "nav-compose" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+material-icons-core = { module = "androidx.compose.material:material-icons-core" }
+
+# Android Studio Preview support
+ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

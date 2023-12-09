@@ -25,16 +25,28 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
 }
 
 dependencies {
+
+    val composeBom = platform("androidx.compose:compose-bom:2023.03.00")
 
     // Modules
     implementation(project(":common"))
@@ -42,7 +54,6 @@ dependencies {
     // Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
 
     // Test
     testImplementation(libs.junit)
@@ -51,10 +62,11 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(composeBom)
 
     // UI Tests
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.test.manifest)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
@@ -69,12 +81,17 @@ dependencies {
     annotationProcessor(libs.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    // Android Studio Preview support
+    implementation(libs.ui.tooling.preview)
+    debugImplementation(libs.ui.tooling)
+
     // Compose
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation(composeBom)
+    implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.navigation.compose)
-    implementation("androidx.compose.material:material-icons-extended")
+    implementation(libs.material.icons.core)
 }
 
 // Allow references to generated code
