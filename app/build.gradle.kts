@@ -91,4 +91,5 @@ dependencies {
 
     // Modules
     implementation(project(":common"))
+    implementation(project(":notes"))
 }
