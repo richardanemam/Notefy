@@ -1,9 +1,9 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.application)
-    alias(libs.plugins.org.jetbrains.kotlin.android)
     kotlin("kapt")
-    id("com.google.dagger.hilt.android")
+    id("com.android.library")
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.dagger.hilt.android)
 }
 
 android {
@@ -11,12 +11,8 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.commom"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,7 +40,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.4.4"
     }
 }
 

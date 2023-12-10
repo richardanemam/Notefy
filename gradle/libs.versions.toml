@@ -63,6 +63,5 @@ ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
-com-android-library = { id = "com.android.library" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-plugin" }
